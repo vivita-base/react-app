@@ -1,0 +1,57 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+
+.logo-c{
+  color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  .vivita{
+    margin: 0 8px 0 0;
+  }
+  .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-height: 48px;
+    max-width: 48px;
+    margin-right: 4px;
+    svg{
+      transform: scale(1.05);
+      height: 100%;
+      width: 100%;      
+      background-color: #FFF;
+      .bg-path{
+        fill: $primary-color;
+      }
+    }
+  }
+  
+  @media screen and (min-width: $desktop-width) {
+    &.tiny-not-mobile{
+      font-size: 11px;
+      flex-wrap: wrap;
+      line-height: 11px;
+    }
+  }
+  &.large{
+    font-size: 32px;
+  }
+  
+}
+.sandbox{
+  .logo-c{ 
+    color: $sandbox-primary-color; 
+    .icon svg .bg-path{fill: $sandbox-primary-color;}
+  }
+}
+.logo-c{
+  &.white{
+    color: #FFF;
+  }
+}
